@@ -1,4 +1,12 @@
 :root {
+  /* CSS Variables for all the font colors and sizes. Try changing these! */
+  --header-background: #54565f;
+  --header-text-color: #fff9c2;
+  --header-font-size: 2rem;
+  --square-font-size: calc(5 * var(--header-font-size));
+  --square-text-color: #060607;
+  --square-background-color: #8a8b9c;
+  --square-border: 3px solid var(--square-text-color);
   font: 16px / 1 sans-serif;
 }
 
@@ -9,4 +17,53 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+  background-color: black;
+}
+
+h1 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0.2rem;
+  font-size: var(--header-font-size);
+  color: var(--header-text-color);
+  margin: 0;
+  padding: 2rem;
+  background-color: var(--header-background);
+}
+
+ul,
+li {
+  margin: 0;
+  list-style: none;
+}
+
+ul {
+  padding-right: 20rem;
+  padding-left: 25rem;
+  padding-top: 3rem;
+  height: calc(100vh - 2 * var(--header-font-size));
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  background-color: var(--square-text-color);
+}
+
+ul li {
+  font-family: monospace;
+  font-size: 2rem;
+  padding: 2rem;
+  background-color: var(--square-background-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 1s font-size ease-in-out;
+}
+li {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+ul li.small {
+  font-size: 4rem;
 }
