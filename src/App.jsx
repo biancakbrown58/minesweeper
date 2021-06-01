@@ -62,6 +62,18 @@ export class App extends Component {
       this.setState(game)
     }
   }
+  getClassName = cell => {
+    switch (cell) {
+      case '_':
+        return 'dash'
+      case '1':
+        return 'number'
+      case '*':
+        return 'bomb'
+      default:
+        return 'cell'
+    }
+  }
 
   render() {
     return (
@@ -69,6 +81,7 @@ export class App extends Component {
         <div className="header">
           <h1>
             Minesweeper - <button onClick={this.handleNewGame}>New Game</button>
+            <h3>Press Shift Click to Flag</h3>
           </h1>
         </div>
 
@@ -78,6 +91,7 @@ export class App extends Component {
               return (
                 <li
                   key={columnIndex}
+                  className={this.getClassName(cell)}
                   onClick={e => {
                     // If Player Presses Shift Key - Flag
                     if (e.shiftKey) {

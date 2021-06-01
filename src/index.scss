@@ -1,9 +1,7 @@
 :root {
-  /* CSS Variables for all the font colors and sizes. Try changing these! */
   --header-background: #54565f;
   --header-text-color: #fff9c2;
-  --header-font-size: 2rem;
-  --square-font-size: calc(5 * var(--header-font-size));
+  --header-font-size: 1rem;
   --square-text-color: #060607;
   --square-background-color: #8a8b9c;
   --square-border: 3px solid var(--square-text-color);
@@ -38,10 +36,7 @@ li {
 }
 
 ul {
-  padding-right: 20rem;
-  padding-left: 25rem;
-  padding-top: 3rem;
-  height: calc(100vh - 2 * var(--header-font-size));
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   gap: 0.2rem;
@@ -49,21 +44,22 @@ ul {
 }
 
 ul li {
-  font-family: monospace;
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 2rem;
   background-color: var(--square-background-color);
   cursor: pointer;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  transition: 1s font-size ease-in-out;
 }
 li {
   border: 1px solid black;
   padding: 1rem;
 }
 
-ul li.small {
-  font-size: 4rem;
+.dash {
+  background-color: white;
+}
+.bomb {
+  background-image: url(BombOmb.png);
+  height: 1rem;
+  background-color: rgb(247, 80, 80);
 }
