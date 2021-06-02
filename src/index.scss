@@ -41,18 +41,25 @@ ul {
   flex-wrap: wrap;
   gap: 0.2rem;
   background-color: var(--square-text-color);
+  padding-right: 25rem;
+  padding-left: 25rem;
+  border: 2px double white;
 }
 
 ul li {
   font-size: 1rem;
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: var(--square-background-color);
   cursor: pointer;
   justify-content: center;
+  width: 0.5px;
+  height: 0.5px;
 }
 li {
   border: 1px solid black;
   padding: 1rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .dash {
